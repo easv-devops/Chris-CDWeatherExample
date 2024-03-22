@@ -11,7 +11,7 @@ steps:
     commands:
       - exit 0
       - dotnet sonarscanner begin
-          /k:"easv-devops_CDWeatherExample_AY4d5zUxEVvRW2O60EXK"
+          /k:"easv-devops_Chris-CDWeatherExample_AY5l5B5tEVvRW2O60EZX"
           /d:sonar.host.url="http://sonar.setgo.dk:9000"  
           /d:sonar.token="$SONARSECRET"
           /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
@@ -58,7 +58,7 @@ steps:
   - name: trigger update
     image: curlimages/curl
     commands:
-      - "curl --fail -X GET 'http://84.247.167.129:8080/v1/update' -H 'Authorization: Bearer mytoken'" # Must match the token defined in docker-compose.yml
+      - "curl --fail -X GET 'http://5.189.148.90:8080/v1/update' -H 'Authorization: Bearer mytoken'" # Must match the token defined in docker-compose.yml
       - sleep 10
     depends_on:
       - publish api
