@@ -21,7 +21,7 @@ public class ForecastService
                     DateTime.Now.AddDays(index),
                     Random.Shared.Next(-20, 55),
                     summaries[Random.Shared.Next(summaries.Length)],
-                    WindSpeed:Random.Shared.Next(0, 13)
+                    Random.Shared.Next(0, 13)
                 ))
             .ToArray();
         
